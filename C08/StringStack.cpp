@@ -5,7 +5,7 @@
 // Copyright notice in Copyright.txt
 // Using static const to create a 
 // compile-time constant inside a class
-#include <string>
+#include <cstring>
 #include <iostream>
 using namespace std;
 

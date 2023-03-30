@@ -6,6 +6,7 @@
 // Templatized Stack with nested iterator
 #ifndef TSTACK2_H
 #define TSTACK2_H
+#include "../require.h"
 
 template<class T> class Stack {
   struct Link {

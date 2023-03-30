@@ -5,6 +5,7 @@
 // Copyright notice in Copyright.txt
 #ifndef TPSTASH_H
 #define TPSTASH_H
+#include <cstring>
 
 template<class T, int incr = 10>
 class PStash {

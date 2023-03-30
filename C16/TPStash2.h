@@ -8,6 +8,7 @@
 #define TPSTASH2_H
 #include "../require.h"
 #include <cstdlib>
+#include <cstring>
 
 template<class T, int incr = 20>
 class PStash {

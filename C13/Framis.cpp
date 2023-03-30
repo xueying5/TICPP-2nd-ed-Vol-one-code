@@ -20,7 +20,7 @@ public:
   enum { psize = 100 };  // frami allowed
   Framis() { out << "Framis()\n"; }
   ~Framis() { out << "~Framis() ... "; }
-  void* operator new(size_t) throw(bad_alloc);
+  void* operator new(size_t) noexcept;
   void operator delete(void*);
 };
 unsigned char Framis::pool[psize * sizeof(Framis)];
@@ -28,7 +28,7 @@ bool Framis::alloc_map[psize] = {false};
 
 // Size is ignored -- assume a Framis object
 void* 
-Framis::operator new(size_t) throw(bad_alloc) {
+Framis::operator new(size_t) noexcept {
   for(int i = 0; i < psize; i++)
     if(!alloc_map[i]) {
       out << "using block " << i << " ... ";

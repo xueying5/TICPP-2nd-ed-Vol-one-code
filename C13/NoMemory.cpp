@@ -13,7 +13,7 @@ public:
   NoMemory() {
     cout << "NoMemory::NoMemory()" << endl;
   }
-  void* operator new(size_t sz) throw(bad_alloc){
+  void* operator new(size_t sz) noexcept{
     cout << "NoMemory::operator new" << endl;
     throw bad_alloc(); // "Out of memory"
   }
